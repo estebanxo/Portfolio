@@ -81,10 +81,9 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
 }
 #compétences h2 {
-    margin-bottom: 35px;
+    margin-bottom: 70px;
 }
 .containerSkills {
     width: 100%;
@@ -144,7 +143,24 @@ button:hover {
     justify-content: center;
 }
 #mesTravaux h2 {
-    margin: 35px 0;
+    margin: 70px 0;
+}
+.containerModal {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.cardKasa {
+    width: 50%;
+    display: block;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1.875rem;
+    box-shadow: 3px 5px 15px 0 rgba(155, 161, 173, 0.2), -3px 3px 3px 3px rgba(230, 234, 238, 0.2);
 }
 
 
