@@ -6,6 +6,7 @@ body {
     margin: 0;
     max-width: 1800px;
     margin: auto;
+    font-family: "Overpass", sans-serif;
 }
 main {
     position: relative;
@@ -285,7 +286,6 @@ button:hover {
     color: white;
     cursor: pointer;
     font-size: 1.5625rem;
-    font-family: "Overpass", sans-serif;
     transition: 0.5s;
 }
 .hoverCard p {
