@@ -7,21 +7,36 @@ body {
     max-width: 1800px;
     margin: auto;
 }
+main {
+    position: relative;
+}
+#introduction1 {
+    position: absolute;
+    top: -150px;
+}
 h2, h1 {
     color: var(--gris-fonce);
 }
 h2 {
-    font-size: 30px;
+    font-size: 25px;
+}
+@media screen and (max-width: 860px) {
+    h2 {
+        font-size: 20px;
+    }
 }
 
+/*                     **************                        */
 
 .navBar {
+    z-index: 1000;
     position: fixed;
     top: 0;
     width: 100%;
     max-width: 1800px;
     margin: auto;
 	display: flex;
+    font-size: calc(0.5rem + 0.5vw);
 	justify-content: space-between;
     align-items: center;
     box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.15);
@@ -38,6 +53,11 @@ h1 > span {
 	font-size: 15px;
 	letter-spacing: 0.1em;
 }
+#icon {
+    display: none;
+    cursor: pointer;
+}
+
 ul {
     list-style: none;
     padding: 0 20px 0 0;
@@ -56,6 +76,13 @@ nav ul li a {
     text-decoration: none;
     color: black;
 }
+nav ul li a:hover {
+    color: #222288;
+    font-weight: 600;
+}
+
+
+/*                     **************                        */
 
 
 #introduction {
@@ -64,6 +91,7 @@ nav ul li a {
     justify-content: center;
     gap: 60px;
     margin: 150px 0 60px 0;
+    width: 100%;
 }
 #introduction article {
     width: 500px;
@@ -74,16 +102,67 @@ nav ul li a {
 .imgIntro img {
     width: 100%;
 }
+@media screen and (max-width: 800px) {
+    #icon {
+        display: block;
+        font-size: 30px;
+        padding-right: 20px;
+    }
+    #icon::before {
+        content: "\2630";
+    }
+    .active #icon::before {
+        content: "\2715";
+    }
+    nav.active ul {
+        left: 0%;
+    }
+    nav ul {
+        background: rgba(0, 0, 0, 0.15);
+        position: fixed;
+        z-index: 1001;
+        top: 6%;
+        left: 100%;
+        flex-direction: column;
+        width: 100%;
+        justify-content: start;
+        transition: 0.3s;
+    }
+    nav ul li {
+        padding: 3px 0;
+    }
+}
+@media screen and (max-width: 860px) {
+    #introduction{
+        flex-direction: column;
+        gap: 40px;
+    }
+    #introduction h2 {
+        text-align: center;
+    }
+    #introduction article {
+        width: 80%;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h1 > span  {
+        font-size: 14px;
+    }
+}
 
 
-#compétences {
+/*                     **************                        */
+
+
+#skills {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-#compétences h2 {
-    margin-bottom: 70px;
+#skills h2 {
+    margin: 30px 0 70px 0;
 }
 .containerSkills {
     width: 100%;
@@ -91,8 +170,9 @@ nav ul li a {
     align-items: start;
     justify-content: space-around;
 }
-.workSpace, .frontend, .backend {
+.dropdown {
     min-width: 250px;
+    margin: 20px;
 }
 .containerSkills img {
     width: 60px;
@@ -133,36 +213,177 @@ button:hover {
     flex-direction: column;
     gap: 20px;
 }
+@media screen and (max-width: 890px) {
+    #introduction {
+        margin: 150px 0 30px 0;
+    }
+    #skills h2 {
+        margin: 15px 0 35px 0;
+    }
+    .containerSkills {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .dropdown {
+        width: 70%;
+    }
+    .dropdown button {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 5%;
+        padding-left: 10%;
+    }
+    .containerSkills img {
+        width: 30px;
+    }
+    button {
+        font-size: 15px;
+        height: 60px;
+    }
+}
 
 
+/*                     **************                        */
 
-#mesTravaux {
+
+#mesTravaux h2 {
+    margin: 70px 0;
+    text-align: center;
+}
+.cards {
+    width: 90%;
+    margin: 0 auto 70px auto;
+    display: flex;
+    gap: 5%;
+}
+.containerCard {
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    gap: 20px;
+    width: 50%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    box-shadow: 3px 5px 15px 5px rgba(155, 161, 173, 0.200), -3px 3px 3px 5px rgba(155, 161, 173, 0.200);
 }
-#mesTravaux h2 {
-    margin: 70px 0;
-}
-.containerModal {
+.hoverCard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 8px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5625rem;
+    font-family: "Overpass", sans-serif;
+    transition: 0.5s;
+}
+.hoverCard p {
+    display: none;
+}
+.hoverCard:hover {
+    background-color: #222288;
+    opacity: 0.9;
+}
+.left {
+    width: 30%;
+    height: 100%;
+}
+.left img {
     width: 100%;
 }
-.cardKasa {
-    width: 50%;
-    display: block;
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    position: relative;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 1.875rem;
-    box-shadow: 3px 5px 15px 0 rgba(155, 161, 173, 0.2), -3px 3px 3px 3px rgba(230, 234, 238, 0.2);
+.right {
+    width: 92%;
+    height: 100%;
+    font-family: "Overpass", sans-serif;
+    font-size: 18px;
+    padding-left: 4%;
+    padding-right: 4%;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(to bottom, #b3b9bd3b, #2c3e505c);
+}
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.top h3 {
+    font-size: 20px;
+    margin: 0;
+}
+.top p {
+    margin: 0;
+}
+.bottom {
+    width: 90%;
+}
+.right strong {
+    font-size: 18px;
+}
+@media screen and (max-width: 1300px) {
+    .cards {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .containerCard {
+        flex-direction: row;
+        width: 80%;
+        justify-content: center;
+        gap: 10px;
+    }
+    .left {
+        width: 30%;
+    }
+    .right {
+        width: 62%;
+        border-radius: 0 10px 10px 0;
+    }
+}
+@media screen and (max-width: 860px) {
+    .top h3 {
+        font-size: 17px;
+    }
+    .right strong {
+        font-size: 15px;
+    }
+    .right {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .cards {
+        gap: 20px;
+    }
+    .containerCard {
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .left {
+        width: 100%;
+        height: 10%;
+    }
+    .right {
+        width: 92%;
+        border-radius: 0 0 10px 10px;
+    }
 }
 
+
+/*                     **************                        */
 
 
 footer {

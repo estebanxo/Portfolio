@@ -12,28 +12,30 @@
         <h1>Esteban TEMPLIER <span>Développeur Web</span></h1>
         <nav>
             <ul>
-                <li> <a href="#introduction">A Propos</a> </li>
-                <li> <a href="#compétences">Mes Compétences</a> </li>
+                <li> <a href="#introduction1">A Propos</a> </li>
+                <li> <a href="#compétences1">Mes Compétences</a> </li>
                 <li> <a href="#mesTravaux">Mes Travaux</a> </li>
             </ul>
+            <div id="icon"></div>
         </nav>
     </header>
     <main>
+        <div id="introduction1"></div>
         <div id="introduction">
             <div class="imgIntro">
                 <img src="./assets/metier-developpeur-web.jpg" alt="">
             </div>
             <article>
-                <h2>Développeur Web</h2>
-                <p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
-                <p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
-                <p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+                <h2>Esteban TEMPLIER</h2>
+                <p>Après ma formation de développeur web chez OpenClassrooms et l'obtention de mon diplôme, je suis à la recherche d’une alternance.</p>
+                <p>Suite à cette formation, j’ai acquis le sens de l’adaptation, de l’initiative, de l’autonomie, et je saurai mettre en application rapidement les missions que me seront confiée.</p>
+                <p id="compétences1">Je construis ce projet depuis près de deux ans maintenant et je sais aujourd’hui qu’exercer ce métier me permettra de m’épanouir pleinement.</p>
             </article>
         </div>
-        <div id="compétences">
+        <div id="skills">
             <h2>Compétences</h2>
             <div class="containerSkills">
-                <div class="workSpace">
+                <div class="dropdown workSpace">
                     <button id="btnWorkSpace" type="button">
                         <img class="imgBtn" src="./assets/outil.png" alt="">
                         <span>Work Space</span>
@@ -42,11 +44,12 @@
                         <div class="containerSkill"><img src="./assets/icons/visual-studio-code.png" alt=""><span>Visual Studio Code</span></div>
                         <div class="containerSkill"><img src="./assets/icons/git.png" alt=""><span>Git</span></div>
                         <div class="containerSkill"><img src="./assets/icons/logo_github.png" alt=""><span>GitHub</span></div>
+                        <div class="containerSkill"><img src="./assets/icons/webpack.png" alt=""><span>Webpack</span></div>
                         <div class="containerSkill"><img src="./assets/icons/npm.png" alt=""><span>Node.js / NPM</span></div>
                         <div class="containerSkill"><img src="./assets/icons/postman.png" alt=""><span>Postman</span></div>
                     </div>
                 </div>
-                <div class="frontend">
+                <div class="dropdown frontend">
                     <button id="btnFrontend" type="button">
                         <img class="imgBtn" src="./assets/computer.png" alt="">
                         <span>Front-End</span>
@@ -58,7 +61,7 @@
                         <div class="containerSkill"><img src="./assets/icons/react.png" alt=""><span>React</span></div>
                     </div>
                 </div>
-                <div class="backend">
+                <div class="dropdown backend">
                     <button id="btnBackend" type="button">
                         <img class="imgBtn" src="./assets/database.png" alt="">
                         <span>Back-End</span>
@@ -73,23 +76,47 @@
         </div>
         <div id="mesTravaux">
             <h2>Réalisations</h2>
-            <div class="containerModal">
-                <a href="#modalKasa" class="cardKasa" style="background-image: url(./assets/capture/Capture-decran-kasa.png);">
-                    <div class="hoverCardKasa">
-                        <div class="titleHoverKasa"></div>
+            <div class="cards">
+                <a href="https://github.com/estebanxo/P6" class="containerCard containerCard1">
+                    <div class="hoverCard hoverCard1">
+                        <p>Voir plus</p>
+                    </div>
+                    <div class="left">
+                        <img src="./assets/capture/kasa-mockup-1024x700-1.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="top">
+                            <h3 class="titleHover">Front-end du site Kasa</h3>
+                            <p><strong>Année:</strong> 2023</p>
+                        </div>
+                        <div class="bottom">
+                            <p><strong>Mission:</strong></p>
+                            <p>Projet réalisé dans le cadre de ma formation OpenClassrooms de développeur web.</p>
+                            <p>Développement du front d’un site de location d’hébergement avec React.</p>
+                            <p>Création de composants React et gestion des états.</p>
+                        </div>
                     </div>
                 </a>
-                <div id="modalKasa" class="modalKasa" aria-hidden="true" role="dialog" aria-labelledby="titleModal" style="display: none;">
-                    <div></div>
-                </div>
-                <a href="#modal2" class="modalLink">
-                    <div class="hoverCard2">
-                        <div class="titleHover2"></div>
+                <a href="https://github.com/estebanxo/Projet3" class="containerCard containerCard2">
+                    <div class="hoverCard hoverCard2">
+                        <p>Voir plus</p>
+                    </div>
+                    <div class="left">
+                        <img src="./assets/capture/Homepage-Macbook.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="top">
+                            <h3 class="titleHover">Front-end du site Kasa</h3>
+                            <p><strong>Année:</strong> 2023</p>
+                        </div>
+                        <div class="bottom">
+                            <p><strong>Mission:</strong></p>
+                            <p>Projet réalisé dans le cadre de ma formation OpenClassrooms de développeur web.</p>
+                            <p>Développement du front du portfolio de Sophie Bluel avec JavaScript.</p>
+                            <p>Création de la modale, appel à l'API, manipulation du DOM, Login/Logout etc.</p>
+                        </div>
                     </div>
                 </a>
-                <div id="modal2" class="modal2" aria-hidden="true" role="dialog" aria-labelledby="titleModal" style="display: none;">
-                    <div></div>
-                </div>
             </div>
         </div>
     </main>
