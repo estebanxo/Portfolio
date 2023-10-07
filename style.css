@@ -498,19 +498,27 @@ footer {
     border: solid 2px var(--gris-fonce);
     color: var(--gris-fonce);
 }
+.atout {
+    color: var(--gris-fonce);
+}
 .techno {
     position: relative;
 }
+.containerLinkCode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+}
 .linkCode {
+    flex-wrap: nowrap;
     text-decoration: none;
+    text-align: center;
     padding: 5px 16px 4px 16px;
     border-radius: 15px;
     font-weight: 700;
     border: solid 2px var(--gris-fonce);
     color: var(--gris-fonce);
-    position: absolute;
-    bottom: 44px;
-    right: 75%;
     transition: 0.5s;
 }
 .linkCode:hover {
@@ -519,29 +527,19 @@ footer {
     border: none;
 }
 .screenShotContainer {
-    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    position: relative;
-}
-#screenShot {
-    position: absolute;
-    top: -100px;
 }
 .screenShotContainer img {
     width: calc(100% - 5%);
     box-shadow: 3px 5px 5px 0px rgba(155, 161, 173, 0.200), -3px 3px 3px 0px rgba(155, 161, 173, 0.200);
 }
-#kasa1 {
-    grid-row-start: 1;
-    grid-row-end: 4;
-}
 @media screen and (max-width: 1210px) {
     .container {
         flex-direction: column;
     }
-    .containerLinkCode {
+    .imgProjet {
         width: 70%;
         margin-bottom: 40px;
     }
@@ -568,3 +566,50 @@ footer {
 /*                     *******    CSS des pages projet2    *******                        */
 
 
+#kasa1, #kasa2, #kasa3, #kasa4 {
+    margin: auto;
+}
+#kasa2, #kasa3, #kasa4 {
+    grid-column-start: 2;
+}
+#kasa1 {
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+#kasa2 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#kasa3 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+#kasa4 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+
+/*                     *******    CSS des pages projet2    *******                        */
+
+
+#sophieBluel1, #sophieBluel2, #sophieBluel3, #sophieBluel4 {
+    margin: auto;
+}
+#sophieBluel2, #sophieBluel4 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+#sophieBluel1, #sophieBluel3 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+#sophieBluel2 {
+    grid-column-start: 2;
+}
+#sophieBluel3 {
+    grid-column-start: 2;
+}
+#sophieBluel4 {
+    grid-column-start: 1;
+}
