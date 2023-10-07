@@ -1,5 +1,6 @@
 :root {
     --gris-fonce: #2c3e50cc;
+    --bleu-fonce: #222288;
 }
 
 body {
@@ -26,6 +27,11 @@ h2 {
         font-size: 20px;
     }
 }
+@media screen and (max-width: 430px) {
+    h2 {
+        font-size: 18px;
+    }
+}
 
 /*                     **************                        */
 
@@ -43,7 +49,7 @@ h2 {
     box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.15);
     background-color: white;
 }
-h1{
+h1 {
 	display: flex;
 	flex-direction: column;
 	font-size: 30px;
@@ -97,7 +103,7 @@ nav ul li a:hover {
     width: 500px;
 }
 .imgIntro {
-    width: 200px;
+    width: 350px;
 }
 .imgIntro img {
     width: 100%;
@@ -145,6 +151,9 @@ nav ul li a:hover {
     }
 }
 @media screen and (max-width: 860px) {
+    .imgIntro {
+        width: 250px;
+    }
     #introduction{
         flex-direction: column;
         gap: 40px;
@@ -160,6 +169,11 @@ nav ul li a:hover {
     }
     h1 > span  {
         font-size: 14px;
+    }
+}
+@media screen and (max-width: 430px) {
+    h1 {
+        font-size: 18px;
     }
 }
 
@@ -183,8 +197,11 @@ nav ul li a:hover {
     justify-content: space-around;
 }
 .dropdown {
+    flex: 1;
     min-width: 250px;
     margin: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 15px 5px rgba(155, 161, 173, 0.200), -3px 3px 3px 5px rgba(155, 161, 173, 0.200);
 }
 .containerSkills img {
     width: 60px;
@@ -198,27 +215,21 @@ button {
     display: flex;
     align-items: center;
     gap: 10px;
-    cursor: pointer;
     width: 100%;
     height: 90px;
     border: none;
     padding: 10px;
     font-size: 20px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     color: white;
-    background: #b3b9bd;
-    background: -webkit-linear-gradient(to right, #b3b9bd, #2c3e50b0);
     background: linear-gradient(to right, #b3b9bd, #2c3e50b0);
-    transition: 0.3s;
-}
-button:hover {
-    box-shadow: 5px -3px 10px 0 #646b6f;
-    transition: 0.3s;
 }
 .content {
     background: #b3b9bd30;
     border-radius: 0 0 7px 7px;
-    height: 0;
+    height: 350px;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
     overflow: hidden;
     transition: 0.3s;
     display: flex;
@@ -254,6 +265,9 @@ button:hover {
         font-size: 15px;
         height: 60px;
     }
+    .content {
+        height: auto;
+    }
 }
 
 
@@ -268,6 +282,8 @@ button:hover {
     width: 90%;
     margin: 0 auto 70px auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 5%;
 }
 .containerCard {
@@ -276,11 +292,10 @@ button:hover {
     border-radius: 10px;
     gap: 20px;
     width: 50%;
-    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     position: relative;
     box-shadow: 3px 5px 15px 5px rgba(155, 161, 173, 0.200), -3px 3px 3px 5px rgba(155, 161, 173, 0.200);
 }
@@ -303,7 +318,7 @@ button:hover {
     display: none;
 }
 .hoverCard:hover {
-    background-color: #222288;
+    background-color: var(--bleu-fonce);
     opacity: 0.9;
 }
 .left {
@@ -319,7 +334,7 @@ button:hover {
 }
 .right {
     width: 92%;
-    height: 300px;
+    height: 330px;
     font-family: "Overpass", sans-serif;
     font-size: 18px;
     padding-left: 4%;
@@ -335,9 +350,10 @@ button:hover {
     gap: 10px;
     flex-wrap: wrap;
 }
-.top h3 {
+.titleHover {
     font-size: 20px;
     margin: 0;
+    padding-right: 30px;
 }
 .top p {
     margin: 0;
@@ -364,6 +380,7 @@ button:hover {
     }
     .right {
         width: 62%;
+        height: auto;
         border-radius: 0 10px 10px 0;
     }
 }
@@ -431,3 +448,123 @@ footer {
     color: white;
     margin: 0;
 }
+
+
+/*                     *******    CSS des pages projet    *******                        */
+
+
+.main {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 60px;
+    position: relative;
+}
+.container div img {
+    width: 100%;
+}
+.imgProjet {
+    width: 50%;
+}
+.containerDescription {
+    width: 50%;
+    padding: 20px 60px 20px 20px;
+    position: relative;
+}
+#topDescription {
+    position: absolute;
+    top: -80px;
+}
+.containerDescription h3 {
+    color: var(--gris-fonce);
+    font-weight: 700;
+    font-size: 25px;
+}
+.ulTechno {
+    display: flex;
+    align-items: center;
+}
+.ulTechno li {
+    padding: 5px 16px 4px 16px;
+    margin: 0 5px 10px 0;
+    font-weight: 700;
+    border-radius: 15px;
+    border: solid 2px var(--gris-fonce);
+    color: var(--gris-fonce);
+}
+.techno {
+    position: relative;
+}
+.linkCode {
+    text-decoration: none;
+    padding: 5px 16px 4px 16px;
+    border-radius: 15px;
+    font-weight: 700;
+    border: solid 2px var(--gris-fonce);
+    color: var(--gris-fonce);
+    position: absolute;
+    bottom: 44px;
+    right: 75%;
+    transition: 0.5s;
+}
+.linkCode:hover {
+    background-color: var(--gris-fonce);
+    color: white;
+    border: none;
+}
+.screenShotContainer {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: relative;
+}
+#screenShot {
+    position: absolute;
+    top: -100px;
+}
+.screenShotContainer img {
+    width: calc(100% - 5%);
+    box-shadow: 3px 5px 5px 0px rgba(155, 161, 173, 0.200), -3px 3px 3px 0px rgba(155, 161, 173, 0.200);
+}
+#kasa1 {
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+@media screen and (max-width: 1210px) {
+    .container {
+        flex-direction: column;
+    }
+    .containerLinkCode {
+        width: 70%;
+        margin-bottom: 40px;
+    }
+    .containerDescription {
+        width: 70%;
+    }
+    .linkCode {
+        position: initial;
+    }
+}
+@media screen and (max-width: 900px) {
+    .screenShotContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+    .screenShotContainer img {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+
+/*                     *******    CSS des pages projet2    *******                        */
+
+
